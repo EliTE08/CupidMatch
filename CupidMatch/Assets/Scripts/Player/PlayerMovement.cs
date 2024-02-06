@@ -7,16 +7,12 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 5.0f;
     private Rigidbody2D rb;
     private Vector2 movement;
-    private float minX, maxX, minY, maxY;
+    public float minX, maxX, minY, maxY; //Public so that you can change it in the unity editor, default for now is -10 to 10 but im not sure how much i even like using this,
+    //I would rather just use a box that the player collides with instead of clamping the position but its good for now.
 
     void Start()
     {
         rb = this.GetComponent<Rigidbody2D>();
-        // Assuming your game world starts at (0,0) and your bounds are 20x20
-        minX = 0;
-        maxX = 20;
-        minY = 0;
-        maxY = 20;
     }
 
     void Update()
