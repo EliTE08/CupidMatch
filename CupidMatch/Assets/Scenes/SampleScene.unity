@@ -226,6 +226,7 @@ GameObject:
   - component: {fileID: 797666365}
   - component: {fileID: 797666364}
   - component: {fileID: 797666366}
+  - component: {fileID: 797666367}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -323,6 +324,31 @@ MonoBehaviour:
   minY: -10
   maxY: 10
   minDistance: 4
+  interests:
+  - Basketball
+  - Painting
+  - Science
+  - Skateboard
+  - Tennis
+--- !u!114 &797666367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 797666363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57c008f954fe54a8bb972de1018a2cb8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_RootBone: {fileID: 0}
+  m_BoneTransforms: []
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_AlwaysUpdate: 1
+  m_AutoRebind: 0
 --- !u!1 &1969113371
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,6 +508,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 2928678940241192972, guid: 50e7f47bfecdfb549a07106491d38c7e, type: 3}
   projectileSpeed: 10
+  fireRate: 1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
