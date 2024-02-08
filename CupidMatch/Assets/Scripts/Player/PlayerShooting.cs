@@ -34,7 +34,21 @@ public class PlayerShooting : MonoBehaviour
         Rigidbody2D projectileRb = projectile.GetComponent<Rigidbody2D>();
         projectileRb.velocity = direction.normalized * projectileSpeed;
 
+        // Add a collider to the projectile for collision detection
+        Collider2D projectileCollider = projectile.GetComponent<Collider2D>();
+        projectileCollider.isTrigger = true;
+
         // You may want to destroy the projectile after a certain time or when it goes off-screen
         Destroy(projectile, 2f); // Adjust the time as needed
+    }
+
+    void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("Customer"))
+        {
+            // Arrow has hit a customer, you may want to perform additional actions here
+            // For example, you can delete the arrow
+            Destroy(gameObject);
+        }
     }
 }
